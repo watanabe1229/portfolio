@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="310.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SlotController">
+    <children>
+        <VBox alignment="CENTER" layoutX="5.0" layoutY="14.0" spacing="10">
+         <HBox prefHeight="15.0" prefWidth="378.0" />
+            <HBox alignment="CENTER" prefHeight="123.0" prefWidth="378.0" spacing="10">
+                <ImageView fx:id="slotImage1" fitHeight="140.0" fitWidth="115.0" />
+                <ImageView fx:id="slotImage2" fitHeight="140.0" fitWidth="115.0" />
+                <ImageView fx:id="slotImage3" fitHeight="140.0" fitWidth="115.0" />
+            </HBox>
+         <HBox prefHeight="12.0" prefWidth="378.0" />
+         <HBox alignment="CENTER" spacing="10">
+            <children>
+               <Label text="役フラグ:" />
+               <TextField fx:id="yaku_flag_field" editable="false" prefHeight="25.0" prefWidth="40.0" />
+               <Label text="flag_suberi1:" />
+               <TextField fx:id="flag_suberi1_field" editable="false" prefHeight="25.0" prefWidth="40.0" />
+               <Label text="t1(stop押した時):" />
+               <TextField fx:id="t1_at_stop_field" prefHeight="25.0" prefWidth="40.0" />
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" spacing="10">
+            <children>
+               <Label text="t1/43:" />
+               <TextField fx:id="t1_43_field" editable="false" prefHeight="25.0" prefWidth="40.0" />
+               <Label text="下段番号(stop時)" />
+               <TextField fx:id="gedan_number_at_stop_field" editable="false" prefHeight="25.0" prefWidth="40.0" />
+               <Label text="未実装:" />
+               <TextField prefHeight="25.0" prefWidth="40.0" />
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" spacing="10">
+            <children>
+               <Label text="t1:" />
+               <TextField fx:id="t1_field" editable="false" prefHeight="25.0" prefWidth="60.0" />
+               <Label text="t2:" />
+               <TextField fx:id="t2_field" editable="false" prefHeight="25.0" prefWidth="60.0" />
+               <Label text="t3:" />
+               <TextField fx:id="t3_field" prefHeight="25.0" prefWidth="60.0" />
+            </children>
+         </HBox>
+            <HBox alignment="CENTER" spacing="10">
+                <Button onAction="#stop1" text="STOP" />
+                <Button onAction="#stop2" text="STOP" />
+                <Button onAction="#stop3" text="STOP" />
+            </HBox>
+         <HBox prefHeight="70.0" prefWidth="378.0">
+            <children>
+               <Label prefHeight="17.0" prefWidth="23.0" />
+               <ImageView fx:id="GoGoLamp" fitHeight="59.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" />
+               <Label prefHeight="38.0" prefWidth="83.0" />
+                  <Button onAction="#start" prefHeight="25.0" prefWidth="53.0" text="START" />
+               <Label prefHeight="59.0" prefWidth="82.0" />
+               <Label prefHeight="28.0" prefWidth="40.0" text="設定：" />
+               <ChoiceBox fx:id="settei" prefHeight="26.0" prefWidth="37.0" />
+            </children>
+         </HBox>
+            <HBox alignment="CENTER" spacing="10">
+            <Label prefHeight="17.0" prefWidth="67.0" />
+                <Label text="スタート" />
+                <TextField fx:id="start_field" editable="false" prefHeight="25.0" prefWidth="60.0" />
+                <Label text="BB" />
+                <TextField fx:id="BB_field" editable="false" prefHeight="25.0" prefWidth="60.0" />
+            <Label text="RB" />
+            <TextField fx:id="RB_field" prefHeight="25.0" prefWidth="60.0" />
+            </HBox>
+         <HBox alignment="CENTER" spacing="10">
+            <children>
+               <Label prefHeight="17.0" prefWidth="127.0" />
+               <Label text="総回転数" />
+               <TextField fx:id="sokaitensu_field" editable="false" prefHeight="25.0" prefWidth="60.0" />
+               <Label text="差枚数" />
+               <TextField fx:id="samaisu_field" editable="false" prefHeight="25.0" prefWidth="60.0" />
+            </children>
+         </HBox>
+         <HBox prefHeight="6.0" prefWidth="378.0" />
+        </VBox>
+    </children>
+</AnchorPane>
