@@ -45,7 +45,7 @@ public class SlotController {
     private long lastUpdateTime = 0;
     private final long interval = 1000_000L; // ※調整用変数・・・各スロットの回転間隔（ナノ秒）(1000_100Lくらいがちょうどいい？その場合はtrimming_move_speedは20が標準速度。)
 	public static int t1=0,t2=0,t3=0;
-	public int trimming_move_speed=2;//デバッグ前は5 //※調整用変数・・・20が標準速度（1分間に約80回転） 数値を大きくすると本来の停止位置をオーバーして停止してしまう。処理順序やアルゴリズムの問題か？
+	public int trimming_move_speed=2; // ※調整用変数・・・20が標準速度（1分間に約80回転） 数値を大きくすると本来の停止位置をオーバーして停止してしまう←標準速度の20であれば問題なく動作する。(処理順序やアルゴリズムの問題か？)
 	public final int start_position=900; //リール開始位置
 	private int suberi1=0,suberi2=0,suberi3=0; //すべり必要距離残変数の宣言及び初期化
 	private int suberi_margin=3; //※調整用変数・・・すべり停止位置の許容誤差（この値が小さいとリール停止位置の誤差は少なくなるが、止まりきれず本来の停止位置をオーバーしてしまうことがある。また、この値を大きくするとリール停止位置の誤差は大きくなるが、停止位置をオーバーしてしまうことが少なくなる。)
